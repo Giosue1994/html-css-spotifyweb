@@ -1,0 +1,44 @@
+/* ________ RESET  ________ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* ________ FINE RESET ________ */
+
+/* ________ REGOLE GENERALI ________*/
+
+/* ________ FINE REGOLE GENERALI ________*/
+
+/* ________ WRAPPER ________ */
+.wrapper {
+  height: calc( 100vh - 100px );
+  overflow: auto;
+}
+/*  MAIN  */
+nav {
+  float: left;
+  width: 300px;
+  height: calc( 100vh - 100px );
+  background-color: lightgreen;
+}
+/*  FINE MAIN  */
+
+/*  FOOTER  */
+footer .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: blue; /*cancellare*/
+  height: 100px;
+}
+
+footer .row > .box {
+  background-color: lightblue; /*cancellare*/
+  border: 5px solid goldenrod; /*cancellare*/
+  flex: 1;
+  text-align: center;
+}
+/*  FINE FOOTER  */
+
+/* ________ FINE WRAPPER ________ */
