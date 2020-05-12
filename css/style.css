@@ -10,17 +10,39 @@
 
 /* ________ FINE REGOLE GENERALI ________*/
 
-/* ________ WRAPPER ________ */
-.wrapper {
-  height: calc( 100vh - 100px );
-  overflow: auto;
-}
 /*  MAIN  */
-nav {
+.menu {
   float: left;
   width: 300px;
-  height: calc( 100vh - 100px );
-  background-color: lightgreen;
+  height: calc( 100vh - 100px);
+  background-color: lightgreen; /*cancellare*/
+}
+.menu .logo {
+  height: 100px;
+  background-color: cyan; /*cancellare*/
+}
+.menu .search {
+  height: 150px;
+  background-color: orange; /*cancellare*/
+}
+.menu .playlist {
+  height: calc( 100vh - 350px);
+  background-color: red; /*cancellare*/
+}
+
+.upgrade {
+  float: left;
+  width: calc( 100% - 300px);
+  height: 100px;
+  background-color: green; /*cancellare*/
+}
+
+.album {
+  float: left;
+  width: calc( 100% - 300px);
+  height: calc( 100vh - 200px);
+  overflow: auto;
+  background-color: yellow; /*cancellare*/
 }
 /*  FINE MAIN  */
 
@@ -30,6 +52,7 @@ footer .row {
   align-items: center;
   justify-content: space-between;
   background: blue; /*cancellare*/
+  width: 100%;
   height: 100px;
 }
 
@@ -40,5 +63,3 @@ footer .row > .box {
   text-align: center;
 }
 /*  FINE FOOTER  */
-
-/* ________ FINE WRAPPER ________ */
