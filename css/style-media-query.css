@@ -1,11 +1,10 @@
 /* ________ MEDIA QUERY ________ */
 @media screen and (max-width: 468px) {
-  .upgrade,
-  .album {
+  .album-content {
     width: calc( 100% - 50px);
   }
 
-  .menu {
+  .nav-content {
     width: 50px;
   }
 }
