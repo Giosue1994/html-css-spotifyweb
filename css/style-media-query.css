@@ -1,5 +1,6 @@
 /* ________ MEDIA QUERY ________ */
 @media screen and (max-width: 468px) {
+  /* ________ DISPLAY-NONE ________ */
   .nav-content .box-logo,
   .nav-content .box-playlist,
   .nav-content .box span,
@@ -8,32 +9,35 @@
     display: none;
   }
 
+/*  NAV-CONTENT */
   .nav-content {
     width: 50px;
   }
+  /* Menu */
   .nav-content .box {
     padding: 5px 15px;
   }
-
+  /* box-logo */
   .nav-content .box-logo-small {
     padding-top: 10px;
   }
   .nav-content .box-logo-small img {
     width: 23px;
   }
-
+  /* box-search */
   .nav-content .box-search {
     height: 100vh;
   }
   .nav-content .box-search li {
     padding: 10px 0;
   }
-
+  /* box-install */
   .nav-content .box-install .download {
     padding-bottom: 10px;
     margin-left: 1.5px;
   }
 
+  /*  ALBUM-CONTENT  */
   .album-content,
   .album-content .upgrade {
     width: calc( 100% - 50px);
@@ -41,6 +45,7 @@
 }
 
 @media screen and (min-width: 469px) {
+  /* box-logo */
   .nav-content .box-logo-small {
     display: none;
   }
