@@ -1,11 +1,48 @@
 /* ________ MEDIA QUERY ________ */
 @media screen and (max-width: 468px) {
-  .album-content {
-    width: calc( 100% - 50px);
+  .nav-content .box-logo,
+  .nav-content .box-playlist,
+  .nav-content .box span,
+  .nav-content .box h4,
+  .nav-content .box hr {
+    display: none;
   }
 
   .nav-content {
     width: 50px;
+  }
+  .nav-content .box {
+    padding: 5px 15px;
+  }
+
+  .nav-content .box-logo-small {
+    padding-top: 10px;
+  }
+  .nav-content .box-logo-small img {
+    width: 23px;
+  }
+
+  .nav-content .box-search {
+    height: 100vh;
+  }
+  .nav-content .box-search li {
+    padding: 10px 0;
+  }
+
+  .nav-content .box-install .download {
+    padding-bottom: 10px;
+    margin-left: 1.5px;
+  }
+
+  .album-content,
+  .album-content .upgrade {
+    width: calc( 100% - 50px);
+  }
+}
+
+@media screen and (min-width: 469px) {
+  .nav-content .box-logo-small {
+    display: none;
   }
 }
 /* ________ FINE MEDIA QUERY ________ */

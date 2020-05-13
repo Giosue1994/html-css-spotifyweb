@@ -54,12 +54,11 @@ main {
   overflow: hidden;
 }
 .menu .box {
-  height: 70px;
   padding: 15px;
 }
 
 /* box-logo */
-.menu .box-logo img{
+.menu .box-logo img {
   width: 130px;
 }
 
