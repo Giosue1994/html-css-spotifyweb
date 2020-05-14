@@ -15,23 +15,27 @@
   }
   /* Menu */
   .nav-content .box {
-    padding: 5px 15px;
+    padding: 5px 0;
   }
   /* box-logo */
   .nav-content .box-logo-small {
     padding-top: 10px;
   }
   .nav-content .box-logo-small img {
-    width: 23px;
+    width: 40px;
+    padding-left: 10px;
   }
   /* box-search */
   .nav-content .box-search {
     height: 100vh;
   }
   .nav-content .box-search li {
-    padding: 10px 0;
+    padding: 10px 15px;
   }
   /* box-install */
+  .nav-content .box-install {
+    padding-left: 15px;
+  }
   .nav-content .box-install .download {
     padding-bottom: 10px;
     margin-left: 1.5px;
@@ -42,12 +46,68 @@
   .album-content .upgrade {
     width: calc( 100% - 50px);
   }
+  /*  recently  */
+  .music .row .box {
+    width: calc( 100% / 2 );
+  }
+
+  /* FOOTER */
+  .box-left .favorite {
+    display: inline-block;
+    position: relative;
+    top: -5px;
+    left: 3%;
+  }
+  .box-left .favorite i {
+    padding: 1%;
+  }
 }
 
 @media screen and (min-width: 469px) {
   /* box-logo */
   .nav-content .box-logo-small {
     display: none;
+  }
+
+  /*  recently  */
+  .music .row .box {
+    width: calc( 100% / 2 );
+  }
+
+  /* FOOTER */
+  .box-left .favorite {
+    display: inline-block;
+    position: relative;
+    top: -5px;
+    left: 3%;
+  }
+  .box-left .favorite i {
+    padding: 1%;
+  }
+}
+
+@media screen and (min-width: 798px) {
+  /*  recently  */
+  .music .row .box {
+    width: calc( 100% / 4 );
+  }
+
+  /* FOOTER */
+  .box-left .favorite {
+    display: inline-block;
+    position: relative;
+    top: -13px;
+    left: 10%;
+  }
+  .box-left .favorite i {
+    padding: 3px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  /*  recently  */
+  .music .row .box {
+    width: calc( 100% / 6 );
   }
 }
 /* ________ FINE MEDIA QUERY ________ */

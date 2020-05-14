@@ -39,7 +39,7 @@
           <div class="box box-playlist">
             <h4>PLAYLIST</h4>
             <a href="#"><div class="add">+</div>Crea playlist</a>
-            <ul>
+            <ul class="new-playlist">
               <li><a href="#">Nuova playlist</a></li>
               <li><a href="#">Nuova playlist</a></li>
               <li><a href="#">Nuova playlist</a></li>
@@ -70,6 +70,114 @@
 
         <!-- Music -->
         <div class="music">
+          <!-- nav-songs -->
+          <div class="nav-songs">
+            <ul>
+              <li><a href="#">in evidenza</a><span></span></li>
+              <li><a href="#">podcast</a></li>
+              <li><a href="#">classifiche</a></li>
+              <li><a href="#">generi e mood</a></li>
+              <li><a href="#">nuove uscite</a></li>
+              <li><a href="#">scopri</a></li>
+            </ul>
+          </div>
+
+            <!-- recently -->
+          <div class="container">
+            <h2>Recently played</h2>
+            <div class="row recently">
+              <div class="box">
+                <img src="img/metal_lifting.jpg" alt="Image">
+                <div class="caption">
+                  <h3>Heavy Metal</h3>
+                  <p>subtitle</p>
+                </div>
+              </div>
+
+              <div class="box">
+                <img src="img/stranger.jpeg" alt="Image">
+                <div class="caption">
+                  <h3>Stranger Things, Vol 1 (a Netflix Original Series Soundtrack)</h3>
+                  <p>Kyle Dixon & Michael Stein</p>
+                </div>
+              </div>
+
+              <div class="box">
+                <img src="img/aquietplace.jpeg" alt="Image">
+                <div class="caption">
+                  <h3>A quiet place</h3>
+                  <p>subtitle</p>
+                </div>
+              </div>
+
+              <div class="box">
+                <img src="img/split.jpeg" alt="Image">
+                <div class="caption">
+                  <h3>Split</h3>
+                  <p>subtitle</p>
+                </div>
+              </div>
+
+              <div class="box">
+                <img src="img/cure.jpeg" alt="Image">
+                <div class="caption">
+                  <h3>A cure for wallness</h3>
+                  <p>subtitle</p>
+                </div>
+              </div>
+
+              <div class="box">
+                <img src="img/sinister.jpeg" alt="Image">
+                <div class="caption">
+                  <h3>Sinister</h3>
+                  <p>subtitle</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- create -->
+          <div class="container">
+            <h2>Creato per Jonh Doe</h2>
+            <p>Più ascolti, più accurati saranno i suggerimenti</p>
+            <div class="row create">
+              <div class="box">
+                <img src="img/radar.jpeg" alt="Image">
+                <div class="caption">
+                  <h3>Release Radar</h3>
+                </div>
+              </div>
+
+              <div class="box">
+                <img src="img/mixdaily.jpeg" alt="Image">
+                <div class="caption">
+                  <h3>Daily Mix 1</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- popular -->
+          <div class="container">
+            <h2>Artisti più popolari</h2>
+            <p>Più ascolti, più accurati saranno i suggerimenti</p>
+            <div class="row create">
+              <div class="box">
+                <img class="rounded" src="img/youg.jpeg" alt="Image">
+                <div class="caption">
+                  <h3>lana del rey</h3>
+                </div>
+              </div>
+
+              <div class="box">
+                <img class="rounded" src="img/einaudi.jpeg" alt="Image">
+                <div class="caption">
+                  <h3>ludovico einaudi</h3>
+                </div>
+              </div>
+            </div>
+          </div>
 
         </div>
       </section>
@@ -79,6 +187,7 @@
     <!-- ________ FOOTER ________ -->
     <footer>
       <div class="row">
+        <!-- Box-left -->
         <div class="box box-left">
           <img src="img/sinister.jpeg" alt="Sinister">
           <div class="song">
@@ -92,10 +201,31 @@
           </div>
         </div>
 
+        <!-- Box-center -->
         <div class="box box-center">
-          cacchina
+
+          <div class="play-buttons">
+            <i class="fas fa-random"></i>
+            <i class="fas fa-step-backward"></i>
+            <i class="far fa-play-circle"></i>
+            <i class="fas fa-step-forward"></i>
+            <i class="fas fa-redo-alt"></i>
+          </div>
+
+          <div class="player">
+            <div class="time start">
+              <span>0:25</span>
+            </div>
+            <div class="bar bar-static">
+              <div class="bar bar-move"></div>
+            </div>
+            <div class="time end">
+              <span>4:35</span>
+            </div>
+          </div>
         </div>
 
+        <!-- Box-right -->
         <div class="box box-right">
           <div class="volume">
             <a href="#"><i class="fas fa-list"></i></a>
