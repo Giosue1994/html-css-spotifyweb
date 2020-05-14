@@ -68,10 +68,17 @@ main {
   height: 100px;
 }
 .menu .box-search li {
-  padding: 3px 10px;;
+  padding: 3px 10px;
+  transition: 0.1s ease-in-out;
 }
-.menu .box-search li:first-child {
+.menu .box-search li.active {
   border-left: 2px solid #5eff00;
+}
+.menu .box-search li.disactive {
+  border-left: 2px solid transparent;
+}
+.menu .box-search li.disactive:hover {
+  border-left: 2px solid white;
 }
 .menu .box-search img {
   margin-right: 5px;
@@ -170,6 +177,7 @@ main {
   width: 200px;
   padding: 10px 30px;
   margin-right: 25px;
+  transition: 0.2s ease-in-out;
 }
 .album-content .upgrade div:hover {
   transform: scale(1.1);
@@ -188,18 +196,26 @@ main {
 .music .nav-songs ul li {
   display: inline-block;
   padding: 0 10px 10px;
-  font-size: 11px;
-  letter-spacing: -1px;
+  font-size: 12px;
 }
-.music .nav-songs ul li span {
+.music .nav-songs ul li .active,
+.music .nav-songs ul li .disactive {
   position: relative;
-  left: 35%;
+  left: 50%;
+  transform: translateX(-50%);
   content: "";
   display: block;
-  width: 30%;
+  width: 20px;
   height: 3px;
   border-bottom: 2px solid #5eff00;
   padding-top: 3px;
+}
+.music .nav-songs ul li .disactive {
+  border-bottom: 2px solid white;
+  display: none;
+}
+.music .nav-songs ul li:hover .disactive {
+  display: block;
 }
 
 .music .container h2,
@@ -214,10 +230,12 @@ main {
 }
 .music .row .box .img-song {
   position: relative;
+  cursor: pointer;
 }
 .music .row .box .img-song img {
   width: 100%;
   padding: 10px;
+  transition: 0.2s ease-in-out;
 }
 .music .row .box .img-song img:hover {
   opacity: 0.4;
@@ -228,6 +246,7 @@ main {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 50px;
+  color: white;
   display: none;
 }
 .music .row .box .img-song img:hover + .play-song i {
@@ -255,7 +274,6 @@ footer .row {
   height: 70px;
   color: #bababa;
   padding: 0 10px;
-  z-index: 654323345;
 }
 
 footer .row > .box {
@@ -313,6 +331,7 @@ footer .row > .box {
   vertical-align: middle;
   padding: 0 3%;
   cursor: pointer;
+  transition: 0.2s ease-in-out;
 }
 .box-center .play-buttons .fa-play-circle {
   font-size: 30px;
@@ -352,6 +371,7 @@ footer .row > .box {
   width: 12px;
   height: 12px;
   display: none;
+  cursor: pointer;
 }
 /*  box-right  */
 .box-right {
@@ -363,5 +383,4 @@ footer .row > .box {
 .box-right .circle {
   top: -13px;
 }
-
 /* ________ FINE FOOTER ________ */
