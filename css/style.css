@@ -28,6 +28,10 @@ a {
   font-weight: bold;
 }
 
+.hover-white:hover {
+  color: white;
+}
+
 /* ________ FINE REGOLE GENERALI ________*/
 
 /* ________ MAIN ________ */
@@ -101,6 +105,9 @@ main {
   line-height: 1;
   text-align: center;
 }
+.menu .box-playlist .add:hover {
+  background-color: white;
+}
 .menu .box-playlist li {
   padding: 7px 0;
 }
@@ -142,22 +149,30 @@ main {
 /*  Upgrade  */
 .album-content .upgrade {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   top: 0;
   right: 0;
   width: calc( 100% - 200px);
   height: 70px;
   background-color: rgba(0, 0, 0, 0.8);
   text-transform: uppercase;
-  text-align: right;
-  line-height: 6;
   font-size: 11px;
+  z-index: 5
 }
- .album-content .upgrade a {
+ .album-content .upgrade .upgrade-button {
+  align-self: flex-end;
+  text-align: center;
   color: white;
   border: 1px solid white;
   border-radius: 30px;
+  width: 200px;
   padding: 10px 30px;
-  margin-right: 10px;
+  margin-right: 25px;
+}
+.album-content .upgrade div:hover {
+  transform: scale(1.1);
 }
 
 /*  Music  */
@@ -191,17 +206,34 @@ main {
 .music .container p {
   padding: 10px 10px 0;
 }
-/*  recently  */
+/* recently */ /* create */ /* popular */
 .music .row {
   display: flex;
   flex-wrap: wrap;
   padding: 20px 0;
 }
-.music .row .box img {
+.music .row .box .img-song {
+  position: relative;
+}
+.music .row .box .img-song img {
   width: 100%;
   padding: 10px;
 }
-.music .row .box img.rounded {
+.music .row .box .img-song img:hover {
+  opacity: 0.4;
+}
+.music .row .box .img-song .play-song i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  display: none;
+}
+.music .row .box .img-song img:hover + .play-song i {
+  display: block;
+}
+.music .row .box .img-song img.rounded {
   border-radius: 50%;
 }
 .music .row .caption {
@@ -211,10 +243,6 @@ main {
   line-height: 1.5;
   text-transform: capitalize;
 }
-
-/*  create  */
-
-/*  popular  */
 /* ________ FINE MAIN ________ */
 
 /* ________ FOOTER ________ */
@@ -251,6 +279,10 @@ footer .row > .box {
   width: 25%;
   background-color: #bababa;
 }
+.box-center .player:hover .circle,
+.box-right .volume:hover .circle {
+  display: block;
+}
 
 /*  box-left  */
 .box-left img {
@@ -264,6 +296,11 @@ footer .row > .box {
 }
 .box-left .song p {
   font-size: 8px;
+}
+.box-left .song p:hover {
+  text-decoration: underline;
+  color: white;
+  cursor: pointer;
 }
 
 /*  box-center  */
@@ -280,19 +317,12 @@ footer .row > .box {
 .box-center .play-buttons .fa-play-circle {
   font-size: 30px;
 }
+.box-center .play-buttons .fa-play-circle:hover {
+  transform: scale(1.1);
+}
 
 .box-center .player {
   padding: 5px 0;
-}
-.box-center .player:hover .bar-move {
-  position: absolute;
-  top: 50%;
-  left: 26%;
-  transform: translate(-50%, -50%);
-  background-color: #5eff00;
-  content: "";
-  width: 10px;
-  height: 10px;
 }
 .box-center .time {
   position: absolute;
@@ -313,12 +343,25 @@ footer .row > .box {
   width: 25%;
   top: 0;
 }
+.box-center .circle,
+.box-right .circle {
+  position: absolute;
+  right: -7px;
+  top: -3px;
+  background-color: #5eff00;
+  width: 12px;
+  height: 12px;
+  display: none;
+}
 /*  box-right  */
 .box-right {
   text-align: right;
 }
 .box-right .volume i {
   padding: 0 2%;
+}
+.box-right .circle {
+  top: -13px;
 }
 
 /* ________ FINE FOOTER ________ */
