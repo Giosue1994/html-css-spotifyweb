@@ -1,5 +1,11 @@
 /* ________ MEDIA QUERY ________ */
-@media screen and (max-width: 468px) {
+@media screen and (max-height: 140px) {
+  .album-content .upgrade {
+    height: 0;
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 568px) {
   /* ________ DISPLAY-NONE ________ */
   .nav-content .box-logo,
   .nav-content .box-playlist,
@@ -63,7 +69,7 @@
   }
 }
 
-@media screen and (min-width: 469px) {
+@media screen and (min-width: 569px) {
   /* box-logo */
   .nav-content .box-logo-small {
     display: none;

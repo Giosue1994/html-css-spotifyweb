@@ -11,6 +11,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   color: #bababa;
   font-size: 12px;
+  scrollbar-color: #5eff00 transparent;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -20,6 +21,7 @@ h1, h2, h3, h4, h5, h6 {
 
 ul {
   list-style-type: none;
+  scrollbar-width: thin;
 }
 
 a {
@@ -92,7 +94,7 @@ main {
   height: 100%;
   overflow: hidden;
 }
-.menu .box-playlist .new-playlist { /*non funziona*/
+.menu .box-playlist .new-playlist {
   overflow: auto;
   margin-top: 10px;
   height: 80%;
@@ -151,6 +153,7 @@ main {
   height: 100%;
   background-color: #191f27;
   overflow-y: auto;
+  scrollbar-width: thin;
 }
 
 /*  Upgrade  */
@@ -228,19 +231,34 @@ main {
   flex-wrap: wrap;
   padding: 20px 0;
 }
+.music .row .box {
+  padding: 10px;
+}
 .music .row .box .img-song {
   position: relative;
   cursor: pointer;
 }
+.music .row .caption {
+  padding-top: 10px;
+  width: 100%;
+  text-align: center;
+  line-height: 1.5;
+  text-transform: capitalize;
+}
 .music .row .box .img-song img {
   width: 100%;
-  padding: 10px;
-  transition: 0.2s ease-in-out;
 }
-.music .row .box .img-song img:hover {
-  opacity: 0.4;
+.music .row .box .img-song .filter {
+  position: absolute;
+  top: 49%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 101%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
 }
-.music .row .box .img-song .play-song i {
+.music .row .box .img-song .filter i {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -249,18 +267,13 @@ main {
   color: white;
   display: none;
 }
-.music .row .box .img-song img:hover + .play-song i {
+.music .row .box .img-song:hover .filter,
+.music .row .box .img-song:hover .filter i {
   display: block;
 }
+.music .row.popular .box .img-song .filter,
 .music .row .box .img-song img.rounded {
   border-radius: 50%;
-}
-.music .row .caption {
-  display: block;
-  width: 100%;
-  text-align: center;
-  line-height: 1.5;
-  text-transform: capitalize;
 }
 /* ________ FINE MAIN ________ */
 
@@ -275,7 +288,6 @@ footer .row {
   color: #bababa;
   padding: 0 10px;
 }
-
 footer .row > .box {
   flex: 1;
 }
